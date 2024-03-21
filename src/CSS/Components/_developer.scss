@@ -1,0 +1,22 @@
+.developer_container{
+    .content{
+        width:60%;
+      
+        .body{
+            box-shadow:common.$boxShadow2;
+            display:grid;
+            grid-template-columns:auto auto 1fr;
+
+            .developer_image{
+                img{
+                    width:20rem;
+                    height:100%;
+                }
+            }
+            .right_side{
+                // border:1px solid red;
+                
+            }
+        }
+    }
+}

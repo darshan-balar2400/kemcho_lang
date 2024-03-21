@@ -1,0 +1,39 @@
+.playground_container {
+
+    .content {
+        .body {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap:1rem;
+
+            .options{
+                display:flex;
+                flex-direction:column;
+
+                button{
+                    margin-bottom:1rem;
+                }
+            }
+
+            .cm-editor{
+                width:40rem;
+                height:40rem;
+                border:1px solid gray;
+                border-radius:0.5rem;
+            }
+
+            .compiler{
+                width:25rem;
+                height:100%;
+                background-color:black;
+                border-radius:0.5rem;
+
+                color:white;
+
+                .error{
+                    // color:#FF000024;
+                }
+            }
+        }
+    }
+}

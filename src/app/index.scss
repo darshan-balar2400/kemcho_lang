@@ -1,0 +1,27 @@
+
+@use "../CSS/Common/common";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: myFont;
+    src: url("/fonts/Blanka-Regular.otf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@import "../CSS/Components/navbar";
+@import '../CSS/Components/hero';
+@import "../CSS/Components/developer";
+@import "../CSS/Components/play";

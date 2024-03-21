@@ -1,0 +1,49 @@
+.nav_container {
+    // box-shadow: common.$boxShadow1;
+    background-color:white;
+    .content {
+        background-color:white;
+        .left_nav {
+            .logo {
+                // .image{
+                //     animation-name: rotate;
+                //     animation-iteration-count: infinite;
+                //     animation-duration: 2s;
+                //     animation-timing-function: linear;
+                // }
+        
+                // @keyframes rotate {
+                //     0% {
+                //         transform: rotate(0deg);
+                //     }
+        
+                //     100% {
+                //         transform: rotate(360deg);
+                //     }
+                // }
+                
+                .logo_title {
+                    width: 100%;
+
+                    h1 {
+                        font-family: myFont;
+                    }
+                }
+            }
+        }
+
+        .right_nav{
+            .versions{
+                .version{
+                    outline:none;
+                    border:1px solid gray;
+                    border-radius: 0.3rem;
+                    padding:0.2rem 0.7rem;
+                    background-color: black;
+                    color: white;
+                    letter-spacing: 0.1rem;
+                }
+            }
+        }
+    }
+}

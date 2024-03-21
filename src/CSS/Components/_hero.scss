@@ -1,0 +1,41 @@
+.hero_section{
+    height:98vh;
+
+    // background-image: linear-gradient(rgba(255, 255, 255, 0.0), rgba(0, 0, 0, 0.0)), url("/images/tech9.png");
+    // // clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 46%, 0% 0%);
+    // // filter:blur(12);
+    // background-size:cover;
+    // clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 0 1%);
+
+    // box-shadow:common.$boxShadow1;
+   
+    .content{
+        .title{
+            h1{
+                color:#171717
+
+            }
+        }
+
+        .subtitle {
+            
+        }
+
+        .buttons{
+            button{
+                @include common.button(){
+                    background-color:black;
+                    color:white;
+                }
+            }
+
+            .documentbutton{
+                @include common.button(){
+                    background-color:white;
+                    color:black;
+                    border:1px solid gray;
+                }
+            }
+        }
+    }
+}
