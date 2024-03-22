@@ -64,9 +64,12 @@ const Developer = () => {
               </ul>
             </div>
             <div className="developer_image">
-              <img
+              <Image
                 src="/images/developer/developer.jpg"
                 alt="developer"
+                width={0}
+                height={0}
+              
               />
             </div>
 

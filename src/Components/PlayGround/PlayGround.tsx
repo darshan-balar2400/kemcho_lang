@@ -83,7 +83,7 @@ const PlayGround = () => {
             {result.length > 0 &&
               result.map((value: string, index: number) => {
                 return (
-                  <p>
+                  <p key={index}>
                     {">>    "}
                     {"   " + value}
                   </p>
