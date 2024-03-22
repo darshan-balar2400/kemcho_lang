@@ -19,13 +19,14 @@
                 }
             }
 
-            .cm-editor{
+            .editor{
+                border:1px solid red;
                 width:45rem;
                 height:40rem;
                 border:1px solid gray;
                 box-shadow: common.$boxShadow3;
                 // border-radius:0.5rem;
-                font-size:1rem;
+                // background-color: black;
             }
 
             .compiler{

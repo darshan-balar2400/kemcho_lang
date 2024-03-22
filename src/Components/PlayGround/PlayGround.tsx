@@ -1,17 +1,43 @@
 "use client";
 
-import CodeMirror from "@uiw/react-codemirror";
-import { javascript } from "@codemirror/lang-javascript";
 import Image from "next/image";
-import execute from "kemcholang";
+import execute from "kemcholang";;
 
 import { useState, useCallback } from "react";
+
+import { highlight } from "prismjs";
+import { kemchoLangSyntax } from "./syntax";
+import Editor from "react-simple-code-editor";
+
+import "prismjs/themes/prism-dark.css";
 const PlayGround = () => {
   const [result, setResult] = useState([] as string[]);
   const [loading, setLoading] = useState(false);
   const [err, setError] = useState("" as string);
-  const [value, setValue] = useState("console.log('hello world!');");
-  const onChange = useCallback((val: string, viewUpdate: any) => {
+  const [value, setValue] = useState(
+  `kem cho 
+  aa che a = 20
+  aa che b = 30
+  aa che c = 70
+  
+  jo (a > b){
+      jo(a > c){
+          batavo "a is greater"
+      }
+      nahitar{
+          batavo "c is greater"
+      }
+  }
+  ka ( b > c ) {
+      batavo "b is greater"
+  }
+  nahitar{
+      batavo "c is greater" fdf d
+  }
+
+  
+aavjo`);
+  const onChange = useCallback((val: string) => {
     setValue(val);
   }, []);
 
@@ -29,6 +55,12 @@ const PlayGround = () => {
       setError(err.name + " : " + err.message);
     }
   };
+
+  const highlightWithLineNumbers = (input: string):string =>
+    highlight(input, kemchoLangSyntax, "kemChoLang")
+      .split("\n")
+      .map((line, i) => `<span class='editorLineNumber'></span>${line}`)
+      .join("\n");
 
   return (
     <div
@@ -50,7 +82,9 @@ const PlayGround = () => {
               />
             </button>
 
-            <button onClick={() => setValue("")}>
+            <button onClick={() => setValue(`kem cho
+            
+aavjo`)}>
               <Image
                 src="/images/developer/reset_1.png"
                 width={40}
@@ -58,28 +92,46 @@ const PlayGround = () => {
                 alt="Github"
               />
             </button>
+
+            <button onClick={() => executeCode()}>
+              <Image
+                src="/images/developer/copy.png"
+                width={40}
+                height={50}
+                alt="Github"
+              />
+            </button>
           </div>
           <div className="code_editor">
-            <CodeMirror
+            <Editor
               value={value}
-              height="200px"
-              extensions={[javascript({ jsx: true })]}
-              onChange={onChange}
+              onValueChange={(code:string) => onChange(code)}
+              highlight={(code:string) => highlightWithLineNumbers(code)}
+              padding={10}
+              textareaClassName="codeArea"
+              className="editor"
+              id="codeEditor"
+              style={{
+                fontFamily: "monospace",
+                fontSize: 16
+              }}
             />
           </div>
           <div className="compiler p-5">
             {loading ? (
               <p>... loading </p>
             ) : (
-              !err && result.length> 0 && (
+              !err && (
                 <p className="successs text-green-500">
                   Swagat Che ! <br /> Kem Cho - Maja Ma ?
                   <br />
                   ------------------------
+                  
                 </p>
               )
             )}
 
+            {!err && <p>Output will be display here <br/></p>}
             {result.length > 0 &&
               result.map((value: string, index: number) => {
                 return (

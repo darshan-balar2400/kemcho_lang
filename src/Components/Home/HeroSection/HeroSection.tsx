@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
     return (
@@ -12,7 +13,7 @@ const Hero = () => {
                 </div>
 
                 <div className="buttons flex gap-3">
-                    <button>Get Started</button>
+                <Link href="#playground_section"><button>Get Started</button></Link>
                     <button className="documentbutton">Documentation</button>
                 </div>
                 <div className="mt-14">

@@ -63,16 +63,7 @@ const Developer = () => {
                 </li>
               </ul>
             </div>
-            <div className="developer_image">
-              <Image
-                src="/images/developer/developer.jpg"
-                alt="developer"
-                width={0}
-                height={0}
-              
-              />
-            </div>
-
+            
             <div className="right_side p-5">
               <div className="top">
 
