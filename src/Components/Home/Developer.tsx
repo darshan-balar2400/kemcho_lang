@@ -71,7 +71,9 @@ const Developer = () => {
             </div>
 
             <div className="right_side p-5">
-              <div className="top flex gap-3 items-center">
+              <div className="top">
+
+                <h1 className="my-2 mb-6 text-2xl">Darshan Balar</h1>
               Description: Designed and implemented a custom programming language using TypeScript, incorporating lexical analysis, abstract syntax tree (AST) generation, parsing, and interpretation functionalities. The language features include variable declaration, print statement, arithmetic calculations, as well as control flow constructs such as if, else-if, and else statements.
               </div>
             </div>

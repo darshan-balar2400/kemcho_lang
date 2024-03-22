@@ -20,7 +20,7 @@ const Navbar = () => {
 
                     <div className="links mx-0">
                         <ul className="flex items-center gap-3">
-                            <li className="text-gray-500 hover:text-gray-900 delay-200"><Link href="#">Playground</Link></li>
+                            <li className="text-gray-500 hover:text-gray-900 delay-200"><Link href="#playground_section">Playground</Link></li>
                             <li className="text-gray-500 hover:text-gray-900 delay-200"><Link href="#">Documentation</Link></li>
                             <li className="text-gray-500 hover:text-gray-900 delay-200"><Link href="#developer_section">Contact Developer</Link></li>
                         </ul>

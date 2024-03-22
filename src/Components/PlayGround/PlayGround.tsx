@@ -2,31 +2,33 @@
 
 import CodeMirror from "@uiw/react-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
-import Image from 'next/image';
+import Image from "next/image";
 import execute from "kemcholang";
 
 import { useState, useCallback } from "react";
 const PlayGround = () => {
-  const [result,setResult] = useState([] as string[]);
-  const [err,setError] = useState("" as string);
+  const [result, setResult] = useState([] as string[]);
+  const [loading, setLoading] = useState(false);
+  const [err, setError] = useState("" as string);
   const [value, setValue] = useState("console.log('hello world!');");
   const onChange = useCallback((val: string, viewUpdate: any) => {
     setValue(val);
   }, []);
 
-
   const executeCode = () => {
     setResult([]);
-    try{
+
+    try {
+      setLoading(true);
       let result = execute(value);
       setError("");
       setResult(result as string[]);
-    }
-    catch(err:any){
-      
+      setLoading(false);
+    } catch (err: any) {
+      setLoading(false);
       setError(err.name + " : " + err.message);
     }
-  }
+  };
 
   return (
     <div
@@ -48,7 +50,7 @@ const PlayGround = () => {
               />
             </button>
 
-            <button>
+            <button onClick={() => setValue("")}>
               <Image
                 src="/images/developer/reset_1.png"
                 width={40}
@@ -66,20 +68,27 @@ const PlayGround = () => {
             />
           </div>
           <div className="compiler p-5">
-
-            {!err && <p className="successs text-green-500">
-              Swagat Che ! <br/> Kem Cho - Moj mane ?
-              
-              <br/>
-              ------------------------
-              </p>}
-
-            
-            {result.length > 0 && result.map((value:string,index:number) => {
-              return (
-                <p>{value}</p>
+            {loading ? (
+              <p>... loading </p>
+            ) : (
+              !err && result.length> 0 && (
+                <p className="successs text-green-500">
+                  Swagat Che ! <br /> Kem Cho - Maja Ma ?
+                  <br />
+                  ------------------------
+                </p>
               )
-            })}
+            )}
+
+            {result.length > 0 &&
+              result.map((value: string, index: number) => {
+                return (
+                  <p>
+                    {">>    "}
+                    {"   " + value}
+                  </p>
+                );
+              })}
 
             {err && <p className="error text-red-500">{err}</p>}
           </div>
