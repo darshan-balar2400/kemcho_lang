@@ -174,7 +174,7 @@ aavjo`,
         <div className="body my-14">
           {documents.map((document:any, index) => {
             return (
-              <div className="document mb-8">
+              <div className="document mb-8" key={index}>
                 <div className="left_side p-4">
                   <div className="title text-2xl mb-4 mt-4">
                     <h3>{document.key}</h3>
