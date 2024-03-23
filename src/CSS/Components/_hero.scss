@@ -31,6 +31,7 @@
         }
 
         @media (max-width: 800px) {
+            width:92%;
         }
 
         .title{
@@ -49,6 +50,7 @@
 
                 @media (max-width:800px){
                     font-size:5vmax;
+                    // border:1px solid red;
                 }
 
             }
@@ -64,7 +66,8 @@
             // margin-top: 2rem;
             
             @media (max-width:550px){
-                width:98%;
+                width:100%;
+                padding:0;
                 // border:1px solid blue; 
             }
 

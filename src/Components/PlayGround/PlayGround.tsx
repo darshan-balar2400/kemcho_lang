@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import execute from "kemcholang";
-
+import Link from "next/link";
 import { useState, useCallback } from "react";
 
 import { highlight } from "prismjs";
@@ -57,6 +57,15 @@ aavjo`
     }
   };
 
+  const copyCode = () => {
+    navigator.clipboard.writeText(value)
+    .then(() => {
+      // setCopied(true);
+      // setTimeout(() => setCopied(false), 2000); // Reset copied state after 2 seconds
+    })
+    .catch(err => console.error('Failed to copy:', err));
+  }
+
   const highlightWithLineNumbers = (input: string): string =>
     highlight(input, kemchoLangSyntax, "kemChoLang")
       .split("\n")
@@ -70,19 +79,19 @@ aavjo`
     >
       <div className="content">
         <div className="title">
-          <h1 className="text-3xl">Playground</h1>
+          <h1 className="text-3xl"># Playground</h1>
         </div>
         <div className="body my-14">
           <div className="code_editor">
             <div className="options">
-              <button onClick={() => executeCode()}>
+              <Link href="#compiler"><button onClick={() => executeCode()}>
                 <Image
                   src="/images/developer/run.png"
                   width={40}
                   height={50}
                   alt="Github"
                 />
-              </button>
+              </button></Link>
 
               <button
                 onClick={() =>
@@ -99,7 +108,7 @@ aavjo`)
                 />
               </button>
 
-              <button onClick={() => executeCode()}>
+              <button onClick={() => copyCode()}>
                 <Image
                   src="/images/developer/copy.png"
                   width={40}
@@ -122,7 +131,7 @@ aavjo`)
                   fontSize: 16,
                 }}
               />
-              <div className="compiler p-5">
+              <div className="compiler p-5" id="compiler">
                 {loading ? (
                   <p>... loading </p>
                 ) : (

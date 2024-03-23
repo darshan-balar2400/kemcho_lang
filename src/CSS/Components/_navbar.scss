@@ -6,6 +6,10 @@
     background-color: white;
     display: flex;
     justify-content: center;
+    position: sticky;
+    top:0;
+    z-index: 10;
+    
 
     .content {
         // width: 100%;
@@ -94,14 +98,16 @@
                     display: none;
                 }
             }
-            .sidemenu {
-                display: none;
-                font-size: 1.5rem;
 
+            .sidemenu{
+                display: none;
                 @media (max-width: 700px) {
                     display: block;
                 }
             }
+            
         }
     }
+
+  
 }

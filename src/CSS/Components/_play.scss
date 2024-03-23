@@ -45,7 +45,7 @@
                 width:100%;
                 // border:1px solid red;
                 display: flex;
-                gap:2rem;
+                gap:1rem;
 
                 
                 // border:1px solid red;
@@ -66,13 +66,14 @@
                 
                 display:flex;
                 flex-direction:column;
+                padding:0rem 1rem;
 
                 // border:1px solid red;
 
 
                 button{
                     margin-bottom:1rem;
-
+                    
                     &:hover{
                         transform:scale(1.1);
                     }
@@ -83,6 +84,7 @@
                     flex-direction: row;
                     align-items: center;
                     gap:1rem;
+                    padding:0rem;
                     // border:1px solid red;
 
                     button{
@@ -116,10 +118,10 @@
             .compiler{
                 width:25rem;
                 height:100%;
-                background-color:black;
+                background-color:#193549;
                 border-radius:0.5rem;
                 box-shadow: common.$boxShadow3;
-
+                font-family:Consolas;
                 color:white;
 
                 @media (max-width:1280px){

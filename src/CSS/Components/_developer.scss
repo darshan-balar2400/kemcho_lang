@@ -41,10 +41,15 @@
                             
                            img{
                                 width:30px;
-                                height:30px;
+                                height:28px;
+                                // border:1px solid red;
                            }
                         }
                     }
+                }
+
+                img:hover{
+                    transform: scale(1.1);
                 }
             }
             .developer_image{

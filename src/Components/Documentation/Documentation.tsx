@@ -169,7 +169,7 @@ aavjo`,
     >
       <div className="content">
         <div className="title text-center">
-          <h1 className="text-3xl font-bold">Documentation</h1>
+          <h1 className="text-3xl font-bold"># Documentation</h1>
         </div>
         <div className="body my-14">
           {documents.map((document:any, index) => {

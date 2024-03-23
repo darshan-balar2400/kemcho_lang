@@ -1,0 +1,21 @@
+.mobile_menu_slide{
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    top:9.5%;
+    display: none;
+
+    // border:1px solid red;
+    // top:0;
+    z-index: 9;
+    background-color: white;
+
+    .links{
+        // border:1px solid red;
+        padding:1.5rem;
+
+        ul li{
+            margin-bottom: 0.7rem;
+        }
+    }
+}

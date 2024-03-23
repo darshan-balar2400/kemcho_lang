@@ -10,8 +10,9 @@ const Hero = () => {
         </div>
         <div className="subtitle">
           <h2 className="">
-            A fun programming language written in typescript <br />- Coding with
-            a touch of fun
+          Coding with
+            a touch of fun<br/>
+            A fun programming language written in typescript
           </h2>
         </div>
 
