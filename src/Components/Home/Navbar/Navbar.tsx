@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
@@ -8,17 +8,17 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const openNav = () => {
-    let mobile_menu = document.getElementById("mobile_menu_slide") as HTMLDivElement
+    let mobile_menu = document.getElementById(
+      "mobile_menu_slide"
+    ) as HTMLDivElement;
 
-    if(open){
-        mobile_menu.style.display="none";
-        setOpen(false);
+    if (open) {
+      mobile_menu.style.display = "none";
+      setOpen(false);
+    } else {
+      mobile_menu.style.display = "block";
+      setOpen(true);
     }
-    else{
-        mobile_menu.style.display = "block";
-        setOpen(true);
-    }
-   
   };
 
   return (
@@ -64,26 +64,31 @@ const Navbar = () => {
             {!open ? <CiMenuFries /> : <AiOutlineClose />}
           </div>
         </div>
-
-        
-
       </div>
 
       <div className="mobile_menu_slide" id="mobile_menu_slide">
-           <div className="links mx-0">
-            <ul className="">
-              <li className="text-gray-500 hover:text-gray-900 delay-200">
-                <Link href="#playground_section" onClick={() => openNav()}>Playground</Link>
-              </li>
-              <li className="text-gray-500 hover:text-gray-900 delay-200">
-                <Link href="#documentation_section" onClick={() => openNav()}>Documentation</Link>
-              </li>
-              <li className="text-gray-500 hover:text-gray-900 delay-200">
-                <Link href="#developer_section" onClick={() => openNav()}>Contact Developer</Link>
-              </li>
-            </ul>
-          </div>
+        <div className="links mx-0">
+          <ul className="">
+            <li className="text-gray-500 hover:text-gray-900 delay-200">
+              <Link href="#playground_section" onClick={() => openNav()}>
+                Playground
+              </Link>
+            </li>
+            <li className="text-gray-500 hover:text-gray-900 delay-200">
+              <Link href="#documentation_section" onClick={() => openNav()}>
+                Documentation
+              </Link>
+            </li>
+            <li className="text-gray-500 hover:text-gray-900 delay-200">
+              <Link href="#developer_section" onClick={() => openNav()}>
+                Contact Developer
+              </Link>
+            </li>
+
+            
+          </ul>
         </div>
+      </div>
     </nav>
   );
 };

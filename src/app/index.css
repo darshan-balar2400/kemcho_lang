@@ -77,24 +77,15 @@ html {
     display: none;
   }
 }
+@media (max-width: 700px) {
+  .nav_container .content .left_nav .links .version {
+    display: none;
+  }
+}
 .nav_container .content .right_nav {
   display: flex;
   gap: 1rem;
   align-items: center;
-}
-.nav_container .content .right_nav .versions .version {
-  outline: none;
-  border: 1px solid gray;
-  border-radius: 0.3rem;
-  padding: 0.2rem 0.7rem;
-  background-color: black;
-  color: white;
-  letter-spacing: 0.1rem;
-}
-@media (max-width: 700px) {
-  .nav_container .content .right_nav .versions {
-    display: none;
-  }
 }
 .nav_container .content .right_nav .sidemenu {
   display: none;
@@ -103,6 +94,17 @@ html {
   .nav_container .content .right_nav .sidemenu {
     display: block;
   }
+}
+.nav_container .versions .version {
+  width: -moz-max-content;
+  width: max-content;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.7rem;
+  background-color: black;
+  color: white;
+  letter-spacing: 0.1rem;
 }
 
 .hero_section {
