@@ -70,7 +70,7 @@ aavjo`
     >
       <div className="content">
         <div className="title">
-          <h1 className="">Playground</h1>
+          <h1 className="text-3xl">Playground</h1>
         </div>
         <div className="body my-14">
           <div className="code_editor">

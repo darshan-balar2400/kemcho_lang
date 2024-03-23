@@ -283,18 +283,6 @@ html {
 }
 .playground_container .content .title h1 {
   font-weight: bold;
-  font-size: 2vmax;
-  line-height: 1.5;
-}
-@media (max-width: 1000px) {
-  .playground_container .content .title h1 {
-    font-size: 3vmax;
-  }
-}
-@media (max-width: 800px) {
-  .playground_container .content .title h1 {
-    font-size: 3.5vmax;
-  }
 }
 .playground_container .content .body .editor_compiler {
   display: grid;

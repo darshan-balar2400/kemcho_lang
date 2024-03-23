@@ -16,17 +16,6 @@
             h1{
                 // font-size:1.5rem;
                 font-weight: bold;
-
-                
-                font-size:2vmax;
-                line-height: 1.5;
-                @media (max-width:1000px){
-                    font-size:3vmax;
-                }
-
-                @media (max-width:800px){
-                    font-size:3.5vmax;
-                }
             }
          }
 
