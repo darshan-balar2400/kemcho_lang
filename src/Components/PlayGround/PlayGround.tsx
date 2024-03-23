@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import execute from "kemcholang";;
+import execute from "kemcholang";
 
 import { useState, useCallback } from "react";
 
@@ -15,7 +15,7 @@ const PlayGround = () => {
   const [loading, setLoading] = useState(false);
   const [err, setError] = useState("" as string);
   const [value, setValue] = useState(
-  `kem cho 
+    `kem cho 
   aa che a = 20
   aa che b = 30
   aa che c = 70
@@ -32,11 +32,12 @@ const PlayGround = () => {
       batavo "b is greater"
   }
   nahitar{
-      batavo "c is greater" fdf d
+      batavo "c is greater"
   }
 
   
-aavjo`);
+aavjo`
+  );
   const onChange = useCallback((val: string) => {
     setValue(val);
   }, []);
@@ -56,7 +57,7 @@ aavjo`);
     }
   };
 
-  const highlightWithLineNumbers = (input: string):string =>
+  const highlightWithLineNumbers = (input: string): string =>
     highlight(input, kemchoLangSyntax, "kemChoLang")
       .split("\n")
       .map((line, i) => `<span class='editorLineNumber'></span>${line}`)
@@ -64,85 +65,91 @@ aavjo`);
 
   return (
     <div
-      className="playground_container my-4 flex justify-center items-center p-4"
+      className="playground_container"
       id="playground_section"
     >
       <div className="content">
-        <div className="title text-center">
-          <h1 className="text-3xl font-bold">Playground</h1>
+        <div className="title">
+          <h1 className="">Playground</h1>
         </div>
         <div className="body my-14">
-          <div className="options">
-            <button onClick={() => executeCode()}>
-              <Image
-                src="/images/developer/run.png"
-                width={40}
-                height={50}
-                alt="Github"
-              />
-            </button>
-
-            <button onClick={() => setValue(`kem cho
-            
-aavjo`)}>
-              <Image
-                src="/images/developer/reset_1.png"
-                width={40}
-                height={50}
-                alt="Github"
-              />
-            </button>
-
-            <button onClick={() => executeCode()}>
-              <Image
-                src="/images/developer/copy.png"
-                width={40}
-                height={50}
-                alt="Github"
-              />
-            </button>
-          </div>
           <div className="code_editor">
-            <Editor
-              value={value}
-              onValueChange={(code:string) => onChange(code)}
-              highlight={(code:string) => highlightWithLineNumbers(code)}
-              padding={10}
-              textareaClassName="codeArea"
-              className="editor"
-              id="codeEditor"
-              style={{
-                fontFamily: "monospace",
-                fontSize: 16
-              }}
-            />
-          </div>
-          <div className="compiler p-5">
-            {loading ? (
-              <p>... loading </p>
-            ) : (
-              !err && (
-                <p className="successs text-green-500">
-                  Swagat Che ! <br /> Kem Cho - Maja Ma ?
-                  <br />
-                  ------------------------
-                  
-                </p>
-              )
-            )}
+            <div className="options">
+              <button onClick={() => executeCode()}>
+                <Image
+                  src="/images/developer/run.png"
+                  width={40}
+                  height={50}
+                  alt="Github"
+                />
+              </button>
 
-            {!err && <p>Output will be display here <br/></p>}
-            {result.length > 0 &&
-              result.map((value: string, index: number) => {
-                return (
-                  <p key={index}>
-                    {">>    "}
-                    {"   " + value}
-                  </p>
-                );
-              })}
+              <button
+                onClick={() =>
+                  setValue(`kem cho
+            
+aavjo`)
+                }
+              >
+                <Image
+                  src="/images/developer/reset_1.png"
+                  width={40}
+                  height={50}
+                  alt="Github"
+                />
+              </button>
 
-            {err && <p className="error text-red-500">{err}</p>}
+              <button onClick={() => executeCode()}>
+                <Image
+                  src="/images/developer/copy.png"
+                  width={40}
+                  height={50}
+                  alt="Github"
+                />
+              </button>
+            </div>
+            <div className="editor_compiler">
+              <Editor
+                value={value}
+                onValueChange={(code: string) => onChange(code)}
+                highlight={(code: string) => highlightWithLineNumbers(code)}
+                padding={10}
+                textareaClassName="codeArea"
+                className="editor"
+                id="codeEditor"
+                style={{
+                  fontFamily: "monospace",
+                  fontSize: 16,
+                }}
+              />
+              <div className="compiler p-5">
+                {loading ? (
+                  <p>... loading </p>
+                ) : (
+                  !err && (
+                    <p className="successs text-green-500">
+                      Swagat Che ! <br /> Kem Cho - Maja Ma ?
+                      <br />
+                      ------------------------
+                    </p>
+                  )
+                )}
+
+                {/* {!err && result.length <= 0 && <p>Output will be display here <br/></p>} */}
+
+                {result.length > 0 &&
+                  result.map((value: string, index: number) => {
+                    return (
+                      <p key={index}>
+                        {">>    "}
+                        {"   " + value}
+                      </p>
+                    );
+                  })}
+
+                {err && <p className="error text-red-500">{err}</p>}
+              </div>
+            </div>
           </div>
         </div>
       </div>

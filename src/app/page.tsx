@@ -11,9 +11,9 @@ export default function Home() {
     <main className="">
    
         <Hero/>
-        <Playground/>
-        <Developer/>
+         <Playground/>
         <Documentation/>
+        <Developer/> 
     </main>
   );
 }

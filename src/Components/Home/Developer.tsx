@@ -3,7 +3,7 @@ import Image from "next/image";
 const Developer = () => {
   return (
     <section>
-      <div className="developer_container flex justify-center items-center my-4 p-4" id="developer_section">
+      <div className="developer_container" id="developer_section">
         <div className="content">
           <div className="title text-center">
             <h1 className="text-3xl font-bold">Developer Info</h1>

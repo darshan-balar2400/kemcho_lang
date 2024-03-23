@@ -1,14 +1,85 @@
 .playground_container {
+    // my-4 flex justify-center items-center p-4
+    margin : 2rem 0rem;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding:1rem;
 
     .content {
+        @media (max-width:1280px){
+            width:90vw;
+         }
+
+         .title{
+            text-align: center;
+            h1{
+                // font-size:1.5rem;
+                font-weight: bold;
+
+                
+                font-size:2vmax;
+                line-height: 1.5;
+                @media (max-width:1000px){
+                    font-size:3vmax;
+                }
+
+                @media (max-width:800px){
+                    font-size:3.5vmax;
+                }
+            }
+         }
+
         .body {
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            gap:1rem;
+
+            // border:1px solid red;
+
+            .editor_compiler{
+                
+                // border:1px solid blue;
+                display: grid;
+                grid-template-columns: 1fr auto;
+                gap:1rem;
+
+                @media (max-width:1280px){
+                    grid-template-columns: 1fr;
+                }
+
+                @media (max-width:600px){
+                    width:100%;
+                //    border:1px solid red;
+                }
+    
+            }
+           
+            .code_editor{
+                width:100%;
+                // border:1px solid red;
+                display: flex;
+                gap:2rem;
+
+                
+                // border:1px solid red;
+                justify-content: center;
+                overflow: hidden;
+
+                @media (max-width:600px){
+                    flex-wrap: wrap;
+                }
+
+                @media (max-width:600px){
+                    gap:1rem;
+                }
+                
+            }
 
             .options{
+                
                 display:flex;
                 flex-direction:column;
+
+                // border:1px solid red;
+
 
                 button{
                     margin-bottom:1rem;
@@ -17,16 +88,40 @@
                         transform:scale(1.1);
                     }
                 }
+
+                @media (max-width:600px){
+                    width:100%;
+                    flex-direction: row;
+                    align-items: center;
+                    gap:1rem;
+                    // border:1px solid red;
+
+                    button{
+                        margin-bottom: 0;
+                        img{
+                            width:30px;
+                            height:30px;
+                        }
+                    }
+                }
             }
 
             .editor{
-                border:1px solid red;
+                // border:1px solid red;
                 width:45rem;
                 height:40rem;
                 border:1px solid gray;
                 box-shadow: common.$boxShadow3;
                 // border-radius:0.5rem;
                 // background-color: black;
+
+                @media (max-width:1280px){
+                    width:80vw;
+                 }
+
+                 @media (max-width:600px){
+                    width:100%;
+                 }
             }
 
             .compiler{
@@ -37,6 +132,11 @@
                 box-shadow: common.$boxShadow3;
 
                 color:white;
+
+                @media (max-width:1280px){
+                    width:100%;
+                    height:15rem;
+                }
 
                 .error{
                     // color:#FF000024;

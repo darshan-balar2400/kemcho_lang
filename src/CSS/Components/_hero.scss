@@ -1,27 +1,92 @@
 .hero_section{
-    height:98vh;
+    height:90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure relative positioning for the inner container */
+    overflow: hidden; 
 
-    // background-image: linear-gradient(rgba(255, 255, 255, 0.0), rgba(0, 0, 0, 0.0)), url("/images/tech9.png");
+    background-color: white;
+    // background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.1)), url("/images/tech2.jpg");
     // // clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 46%, 0% 0%);
     // // filter:blur(12);
     // background-size:cover;
     // clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 0 1%);
 
     // box-shadow:common.$boxShadow1;
-   
+    
     .content{
+        position: absolute; /* Position content relative to .hero_section */
+        z-index: 1;
+        width:80%;
+        display: flex;
+        // flex justify-center items-center flex-col
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        
+        @media (max-width: 1000px) {
+            width: 90%;
+        }
+
+        @media (max-width: 800px) {
+        }
+
         .title{
+            margin-bottom: 1rem;
             h1{
-                color:#171717
+                font-weight: bold;
+                font-size:4vmax;
+                color:#171717;
+                // margin-bottom:1rem;
+                text-align: center;
+                line-height: 1.2;
+
+                @media (max-width:1000px){
+                    font-size:4.5vmax;
+                }
+
+                @media (max-width:800px){
+                    font-size:5vmax;
+                }
 
             }
         }
 
         .subtitle {
+            // border:1px solid red;
+            // text-center mb-12 w-3/5
             
+            text-align: center;
+            margin-bottom: 1rem;
+            width:70%;
+            // margin-top: 2rem;
+            
+            @media (max-width:550px){
+                width:98%;
+                // border:1px solid blue; 
+            }
+
+            h2{
+                font-size:1.5vmax;
+                line-height: 1.5;
+                @media (max-width:1000px){
+                    font-size:2vmax;
+                }
+
+                @media (max-width:800px){
+                    font-size:2vmax;
+                }
+
+
+            }
         }
 
         .buttons{
+            display: flex;
+            gap:0.8rem;
+            margin-top: 1rem;
             button{
                 @include common.button(){
                     background-color:black;
@@ -37,5 +102,40 @@
                 }
             }
         }
+
+        .image{
+            img{
+               
+                width:8vmax;
+                height:8vmax;
+                line-height: 1.5;
+                // border:1px solid red;
+
+                @media (max-width:1000px){
+                    width:9vmax;
+                    height:9vmax;
+                }
+
+                @media (max-width:800px){
+                    width:10vmax;
+                    height:10vmax;
+                }
+
+
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-image:url("/images/tech25.jpg");
+    background-size: cover;
+    transform: scaleX(-1);
+    z-index: 0; /* Ensure background is below content */
     }
 }
