@@ -61,7 +61,6 @@ const Developer = () => {
                       // style={{"border":"1px solid lightgray"}}
                     />
                   </Link>
-
                   
                 </li>
                 <li className="mb-4">

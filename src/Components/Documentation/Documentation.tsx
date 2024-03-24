@@ -7,7 +7,7 @@ const Documentation = () => {
       key: "General",
       description: (
         <div>
-          Every program should start with <code>kem cho</code> and end with{" "}
+          Every program should start with <code>kem cho</code> and ends with{" "}
           <code>aavjo</code> .
         </div>
       ),
@@ -86,7 +86,27 @@ aavjo`,
    aa che b = 20
    aa che c = 30
 
-   aa che sum = a + b + c
+   aa che mul = 1
+   mul = a * b * c
+
+aavjo`,
+    },
+    ,
+    {
+      key: "Operators",
+      description: (
+        <div>
+          only <code>{'<'}</code> and <code>{'>'}</code> supported
+        </div>
+      ),
+      code: `kem cho
+
+   aa che a = 10
+   aa che b = 20
+   
+   jo ( a > b){
+    batavo a
+   }
 
 aavjo`,
     },
@@ -125,10 +145,10 @@ aavjo`,
     aa che a = 10
 
     jo ( a > 12 ){
-      batavo a
+      batavo "a is greater than 12"
     }
     ka (a > 9){
-      batavo "a is equal to 10"
+      batavo "a is greater than 9"
     }
     
 aavjo`,
@@ -149,13 +169,13 @@ aavjo`,
     aa che a = 10
 
     jo ( a > 12 ){
-      batavo a
+      batavo "a is greater than 12"
     }
-    ka (a > 10){
-      batavo "a is equal to 10"
+    ka (a > 9){
+      batavo "a is greater than 9"
     }
     nahitar{
-      batavo "kay satisfied nathi thatu"
+      batavo "a is less than 12 and 9"
     }
     
 aavjo`,
