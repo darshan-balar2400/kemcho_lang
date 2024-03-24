@@ -17,7 +17,7 @@ const Developer = () => {
                       src="/images/developer/github.png"
                       width={40}
                       height={50}
-                      alt="Github"
+                      alt="Github Profile"
                     />
                   </Link>
                 </li>
@@ -27,7 +27,7 @@ const Developer = () => {
                       src="/images/developer/linkedin.png"
                       width={40}
                       height={50}
-                      alt="Linkedin"
+                      alt="Linkedin Profile"
                     />
                   </Link>
                 </li>
@@ -37,7 +37,7 @@ const Developer = () => {
                       src="/images/developer/twitter.png"
                       width={40}
                       height={50}
-                      alt="Twitter"
+                      alt="Twitter Profile"
                     />
                   </Link>
                 </li>
@@ -47,12 +47,12 @@ const Developer = () => {
                       src="/images/developer/instagram.png"
                       width={40}
                       height={50}
-                      alt="Instagram"
+                      alt="Instagram Profile"
                     />
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="https://www.instagram.com/darshanbalar40/" target="_blank" >
+                  <Link href="https://auth.geeksforgeeks.org/user/balardarshan_db" target="_blank" >
                     <Image
                       src="/images/developer/gfg_logo.png"
                       width={40}
@@ -65,7 +65,7 @@ const Developer = () => {
                   
                 </li>
                 <li className="mb-4">
-                  <Link href="https://www.instagram.com/darshanbalar40/" target="_blank" >
+                  <Link href="https://www.npmjs.com/~darshanbalar40" target="_blank" >
                     <Image
                       src="/images/developer/npm.png"
                       width={40}
