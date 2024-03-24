@@ -14,6 +14,10 @@ const Hero = () => {
             a touch of fun<br/>
             A fun programming language written in typescript
           </h2>
+
+          <h2 className="npm">
+            <code>npm i kemcholang</code>
+          </h2>
         </div>
 
         <div className="buttons">

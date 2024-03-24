@@ -88,6 +88,7 @@ html {
   align-items: center;
 }
 .nav_container .content .right_nav .sidemenu {
+  font-size: 1.5rem;
   display: none;
 }
 @media (max-width: 700px) {
@@ -166,6 +167,16 @@ html {
     padding: 0;
   }
 }
+.hero_section .content .subtitle .npm {
+  margin-top: 1.5rem;
+}
+.hero_section .content .subtitle .npm code {
+  background-color: rgb(240, 240, 240);
+  color: black;
+  font-weight: bold;
+  padding: 0.2rem 0.7rem;
+  border-radius: 0.3rem;
+}
 .hero_section .content .subtitle h2 {
   font-size: 1.5vmax;
   line-height: 1.5;
@@ -204,6 +215,10 @@ html {
   width: 8vmax;
   height: 8vmax;
   line-height: 1.5;
+  animation-name: load;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 @media (max-width: 1000px) {
   .hero_section .content .image img {
@@ -215,6 +230,14 @@ html {
   .hero_section .content .image img {
     width: 10vmax;
     height: 10vmax;
+  }
+}
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 .hero_section::before {
@@ -270,7 +293,7 @@ html {
     gap: 1rem;
   }
   .developer_container .content .body .left_side ul li img {
-    width: 30px;
+    width: 28px;
     height: 28px;
   }
 }

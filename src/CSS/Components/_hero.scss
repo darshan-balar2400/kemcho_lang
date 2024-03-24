@@ -71,9 +71,22 @@
                 // border:1px solid blue; 
             }
 
+            .npm{
+                margin-top: 1.5rem;
+                
+                code{
+                    background-color: rgb(240,240,240);
+                    color:black;
+                    font-weight: bold;
+                    padding:0.2rem 0.7rem;
+                    border-radius: 0.3rem;
+                }
+            }
+            
             h2{
                 font-size:1.5vmax;
                 line-height: 1.5;
+
                 @media (max-width:1000px){
                     font-size:2vmax;
                 }
@@ -82,8 +95,12 @@
                     font-size:2vmax;
                 }
 
+                
 
             }
+
+           
+
         }
 
         .buttons{
@@ -112,7 +129,10 @@
                 width:8vmax;
                 height:8vmax;
                 line-height: 1.5;
-                // border:1px solid red;
+                animation-name: load;
+                animation-duration: 20s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
 
                 @media (max-width:1000px){
                     width:9vmax;
@@ -124,6 +144,15 @@
                     height:10vmax;
                 }
 
+
+                @keyframes load{
+                    0%{
+                        transform: rotate(0deg);
+                    }
+                    100%{
+                        transform: rotate(360deg);
+                    }
+                }
 
             }
         }
