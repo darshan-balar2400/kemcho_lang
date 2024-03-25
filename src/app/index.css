@@ -334,6 +334,14 @@ html {
   grid-template-columns: 1fr auto;
   gap: 1rem;
 }
+.playground_container .content .body .editor_compiler .code_box .program_options {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0rem;
+}
+.playground_container .content .body .editor_compiler .code_box .program_options select {
+  border: 1px solid gray;
+  padding: 0.5rem 0.8rem;
+}
 @media (max-width: 1280px) {
   .playground_container .content .body .editor_compiler {
     grid-template-columns: 1fr;

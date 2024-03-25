@@ -3,42 +3,20 @@
 import Image from "next/image";
 import execute from "kemcholang";
 import Link from "next/link";
-import { useState, useCallback } from "react";
+import { useState, useCallback,useEffect } from "react";
 
 import { highlight } from "prismjs";
 import { kemchoLangSyntax } from "./syntax";
 import Editor from "react-simple-code-editor";
-
+import programs from "./programs";
 import "prismjs/themes/prism-dark.css";
 const PlayGround = () => {
   const [result, setResult] = useState([] as string[]);
+  const[programType,setProgramType] = useState("greatest");
   const [loading, setLoading] = useState(false);
   const [err, setError] = useState("" as string);
 
-  const [value, setValue] = useState(
-    `kem cho 
-  aa che a = 20
-  aa che b = 30
-  aa che c = 70
-  
-  jo (a > b){
-      jo(a > c){
-          batavo "a is greater"
-      }
-      nahitar{
-          batavo "c is greater"
-      }
-  }
-  ka ( b > c ) {
-      batavo "b is greater"
-  }
-  nahitar{
-      batavo "c is greater"
-  }
-
-  
-aavjo`
-  );
+  const [value, setValue] = useState(``);
   const onChange = useCallback((val: string) => {
     setValue(val);
   }, []);
@@ -58,14 +36,23 @@ aavjo`
     }
   };
 
-  const copyCode = () => {
-    navigator.clipboard.writeText(value)
-    .then(() => {
-      // setCopied(true);
-      // setTimeout(() => setCopied(false), 2000); // Reset copied state after 2 seconds
-    })
-    .catch(err => console.error('Failed to copy:', err));
+  const changeProgramType = (e:any) => {
+    setProgramType(e.target.value);
   }
+
+  useEffect(() => {
+    setValue(programs[programType]);
+  },[programType]);
+
+  const copyCode = () => {
+    navigator.clipboard
+      .writeText(value)
+      .then(() => {
+        // setCopied(true);
+        // setTimeout(() => setCopied(false), 2000); // Reset copied state after 2 seconds
+      })
+      .catch((err) => console.error("Failed to copy:", err));
+  };
 
   const highlightWithLineNumbers = (input: string): string =>
     highlight(input, kemchoLangSyntax, "kemChoLang")
@@ -74,10 +61,7 @@ aavjo`
       .join("\n");
 
   return (
-    <div
-      className="playground_container"
-      id="playground_section"
-    >
+    <div className="playground_container" id="playground_section">
       <div className="content">
         <div className="title">
           <h1 className="text-3xl"># Playground</h1>
@@ -85,14 +69,16 @@ aavjo`
         <div className="body my-14">
           <div className="code_editor">
             <div className="options">
-              <Link href="#compiler"><button onClick={() => executeCode()}>
-                <Image
-                  src="/images/developer/run.png"
-                  width={40}
-                  height={50}
-                  alt="Github"
-                />
-              </button></Link>
+              <Link href="#compiler">
+                <button onClick={() => executeCode()}>
+                  <Image
+                    src="/images/developer/run.png"
+                    width={40}
+                    height={50}
+                    alt="Github"
+                  />
+                </button>
+              </Link>
 
               <button
                 onClick={() =>
@@ -119,19 +105,34 @@ aavjo`)
               </button>
             </div>
             <div className="editor_compiler">
-              <Editor
-                value={value}
-                onValueChange={(code: string) => onChange(code)}
-                highlight={(code: string) => highlightWithLineNumbers(code)}
-                padding={10}
-                textareaClassName="codeArea"
-                className="editor"
-                id="codeEditor"
-                style={{
-                  fontFamily: "monospace",
-                  fontSize: 16,
-                }}
-              />
+              <div className="code_box">
+                <div className="program_options">
+                   <div className="elem">
+                      {/* <span>Program : </span> */}
+                      <select value={programType} onChange={(e) => changeProgramType(e)}>
+                        <option value="greatest">Greatest Among 3</option>
+                        <option value="voting">Voting Eligible</option>
+                        <option value="sum">Sum</option>
+                        <option value="mul">Multiplication</option>
+                        <option value="calculate">Calculate Expression</option>
+                        <option value="empty">Empty</option>
+                      </select>
+                   </div>
+                </div>
+                <Editor
+                  value={value}
+                  onValueChange={(code: string) => onChange(code)}
+                  highlight={(code: string) => highlightWithLineNumbers(code)}
+                  padding={10}
+                  textareaClassName="codeArea"
+                  className="editor"
+                  id="codeEditor"
+                  style={{
+                    fontFamily: "monospace",
+                    fontSize: 16,
+                  }}
+                />{" "}
+              </div>
               <div className="compiler p-5" id="compiler">
                 {loading ? (
                   <p>... loading </p>

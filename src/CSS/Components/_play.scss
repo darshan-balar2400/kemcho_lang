@@ -24,6 +24,21 @@
             // border:1px solid red;
 
             .editor_compiler{
+
+                .code_box{
+                    // border:1px solid red;
+
+                    .program_options{
+                        // border:1px solid blue;
+                        margin-bottom: 1rem;
+                        padding:0.5rem 0rem;
+
+                        select{
+                            border:1px solid gray;
+                            padding:0.5rem 0.8rem;
+                        }
+                    }
+                }
                 
                 // border:1px solid blue;
                 display: grid;
