@@ -485,7 +485,7 @@ html {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  top: 9.5%;
+  top: 9%;
   display: none;
   z-index: 9;
   background-color: white;
