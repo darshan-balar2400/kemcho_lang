@@ -104,7 +104,7 @@ aavjo`,
    aa che a = 10
    aa che b = 20
    
-   jo ( a > b){
+   jo ( a < b){
     batavo a
    }
 

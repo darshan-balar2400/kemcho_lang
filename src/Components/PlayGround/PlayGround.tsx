@@ -115,6 +115,8 @@ aavjo`)
                         <option value="sum">Sum</option>
                         <option value="mul">Multiplication</option>
                         <option value="calculate">Calculate Expression</option>
+                        <option value="swap">Swap Two Numbers</option>
+                        <option value="checkposneg">Check Positive Or Negative Number</option>
                         <option value="empty">New Program</option>
                       </select>
                    </div>

@@ -49,6 +49,7 @@ empty:`kem cho
 
 aavjo`,
 voting:`kem cho
+
     aa che age = 17
 
     jo (age > 18){
@@ -57,12 +58,38 @@ voting:`kem cho
     nahitar{
         batavo "Your not eligible for voting"
     }
+    
 aavjo`,
 calculate:`kem cho
 
     aa che cal = 10 + 20 * 2 - (5 * 5 - (20 * 2)) + (10*2) - (20 * 3) + 200
     batavo cal   
 
+aavjo`,
+swap:`kem cho
+
+    aa che a = 10
+    aa che b = 20
+    aa che c
+
+    c = a
+    a = b
+    b = c
+
+    batavo a
+    batavo b
+aavjo`,
+checkposneg:`kem cho
+    
+    aa che a = 10
+
+    jo(a > 0){
+        batavo "a is positive no"
+    }
+    nahitar{
+        batavo "a is negative no"
+    }
+    
 aavjo`
 };
 
