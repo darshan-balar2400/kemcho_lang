@@ -117,6 +117,7 @@ aavjo`)
                         <option value="calculate">Calculate Expression</option>
                         <option value="swap">Swap Two Numbers</option>
                         <option value="checkposneg">Check Positive Or Negative Number</option>
+                        <option value="averagecal">Calc Average</option>
                         <option value="empty">New Program</option>
                       </select>
                    </div>

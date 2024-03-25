@@ -89,6 +89,17 @@ checkposneg:`kem cho
     nahitar{
         batavo "a is negative no"
     }
+
+aavjo`,
+averagecal:`kem cho
+
+    aa che a = 10.15
+    aa che b = 20.80
+    aa che d = 60.43
+
+    aa che average = (a + b + d) / 3
+
+    batavo average
     
 aavjo`
 };
