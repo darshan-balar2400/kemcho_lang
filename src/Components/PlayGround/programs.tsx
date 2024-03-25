@@ -83,7 +83,7 @@ checkposneg:`kem cho
     
     aa che a = 10
 
-    jo(a > 0){
+    jo(a > -1){
         batavo "a is positive no"
     }
     nahitar{
@@ -100,7 +100,7 @@ averagecal:`kem cho
     aa che average = (a + b + d) / 3
 
     batavo average
-    
+
 aavjo`
 };
 
