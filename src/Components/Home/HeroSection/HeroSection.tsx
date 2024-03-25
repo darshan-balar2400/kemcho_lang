@@ -16,7 +16,7 @@ const Hero = () => {
           </h2>
 
           <h2 className="npm">
-            <code>npm i kemcholang</code>
+            <Link href="https://www.npmjs.com/package/kemcholang"><code>npm i kemcholang </code></Link>
           </h2>
 
           <h2 className="developer_name">Made by <span><Link href="https://www.linkedin.com/in/darshan-balar-4302141bb/">@darshanbalar</Link></span></h2>
