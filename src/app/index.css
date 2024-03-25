@@ -13,6 +13,10 @@ body {
   font-family: myFont;
   src: url("/fonts/Blanka-Regular.otf");
 }
+@font-face {
+  font-family: myfont2;
+  src: url("/fonts/CONSOLA.TTF");
+}
 html {
   scroll-behavior: smooth;
 }
@@ -420,7 +424,7 @@ html {
   background-color: #193549;
   border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  font-family: Consolas;
+  font-family: myfont2;
   color: white;
 }
 @media (max-width: 1280px) {

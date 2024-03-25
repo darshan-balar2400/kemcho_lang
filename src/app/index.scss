@@ -19,6 +19,11 @@ body{
     src: url("/fonts/Blanka-Regular.otf");
 }
 
+@font-face{
+  font-family: myfont2;
+  src:url("/fonts/CONSOLA.TTF");
+}
+
 html {
   scroll-behavior: smooth;
 }
