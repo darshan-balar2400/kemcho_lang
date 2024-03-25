@@ -65,7 +65,7 @@ html {
   display: flex;
   place-items: center;
   font-size: 1.4rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 .nav_container .content .left_nav .logo .logo_title h1 {
   font-family: myFont;
@@ -482,10 +482,10 @@ html {
 }
 
 .mobile_menu_slide {
-  width: 100vw;
+  width: 100vmax;
   height: 100vh;
   position: fixed;
-  top: 9%;
+  top: 8.8%;
   display: none;
   z-index: 9;
   background-color: white;
