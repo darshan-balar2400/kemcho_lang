@@ -82,6 +82,17 @@
                     border-radius: 0.3rem;
                 }
             }
+
+            .developer_name{
+                // font-size:1.2vmax;
+                margin-top: 1.5rem;
+
+                span{
+                    color:black;
+                    font-weight: bold;
+                    // text-decoration: underline;
+                }
+            }
             
             h2{
                 font-size:1.5vmax;
@@ -94,8 +105,6 @@
                 @media (max-width:800px){
                     font-size:2vmax;
                 }
-
-                
 
             }
 

@@ -177,6 +177,13 @@ html {
   padding: 0.2rem 0.7rem;
   border-radius: 0.3rem;
 }
+.hero_section .content .subtitle .developer_name {
+  margin-top: 1.5rem;
+}
+.hero_section .content .subtitle .developer_name span {
+  color: black;
+  font-weight: bold;
+}
 .hero_section .content .subtitle h2 {
   font-size: 1.5vmax;
   line-height: 1.5;

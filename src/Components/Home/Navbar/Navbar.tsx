@@ -84,8 +84,6 @@ const Navbar = () => {
                 Contact Developer
               </Link>
             </li>
-
-            
           </ul>
         </div>
       </div>
