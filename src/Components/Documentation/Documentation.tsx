@@ -44,10 +44,11 @@ aavjo`,
       code: `kem cho
 
    aa che a = 10
-   aa che b = "hello"
-   aa che c = sachu
-   aa che d = khotu
-   aa che e = 20 + 10 * (2 * 5)
+   aa che b = 20.78
+   aa che c = "hello"
+   aa che d = sachu
+   aa che e = khotu
+   aa che f = 20 + 10 * (2 * 5)
 
 aavjo`,
     },
