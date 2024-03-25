@@ -24,7 +24,7 @@ const programTypes: ProgramTypes = {
     }
   
     
-  aavjo`,
+aavjo`,
   sum:`kem cho
 
     aa che a = 10
@@ -62,7 +62,7 @@ calculate:`kem cho
 
     aa che cal = 10 + 20 * 2 - (5 * 5 - (20 * 2)) + (10*2) - (20 * 3) + 200
     batavo cal   
-    
+
 aavjo`
 };
 

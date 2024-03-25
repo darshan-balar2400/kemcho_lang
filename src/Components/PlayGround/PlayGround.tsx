@@ -75,7 +75,7 @@ const PlayGround = () => {
                     src="/images/developer/run.png"
                     width={40}
                     height={50}
-                    alt="Github"
+                    alt="Run Code"
                   />
                 </button>
               </Link>
@@ -91,7 +91,7 @@ aavjo`)
                   src="/images/developer/reset_1.png"
                   width={40}
                   height={50}
-                  alt="Github"
+                  alt="Reset Code"
                 />
               </button>
 
@@ -100,7 +100,7 @@ aavjo`)
                   src="/images/developer/copy.png"
                   width={40}
                   height={50}
-                  alt="Github"
+                  alt="Copy Code"
                 />
               </button>
             </div>
@@ -115,7 +115,7 @@ aavjo`)
                         <option value="sum">Sum</option>
                         <option value="mul">Multiplication</option>
                         <option value="calculate">Calculate Expression</option>
-                        <option value="empty">Empty</option>
+                        <option value="empty">New Program</option>
                       </select>
                    </div>
                 </div>

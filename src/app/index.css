@@ -339,8 +339,10 @@ html {
   padding: 0.5rem 0rem;
 }
 .playground_container .content .body .editor_compiler .code_box .program_options select {
+  width: 100%;
   border: 1px solid gray;
   padding: 0.5rem 0.8rem;
+  background-color: white;
 }
 @media (max-width: 1280px) {
   .playground_container .content .body .editor_compiler {
