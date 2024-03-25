@@ -65,7 +65,7 @@ html {
   display: flex;
   place-items: center;
   font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 .nav_container .content .left_nav .logo .logo_title h1 {
   font-family: myFont;
