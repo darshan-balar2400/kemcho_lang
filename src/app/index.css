@@ -482,7 +482,7 @@ html {
 }
 
 .mobile_menu_slide {
-  width: 97vh;
+  width: 100vw;
   height: 100vh;
   position: fixed;
   top: 8.8%;
