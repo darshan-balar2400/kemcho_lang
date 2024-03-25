@@ -16,10 +16,10 @@ const Hero = () => {
           </h2>
 
           <h2 className="npm">
-            <Link href="https://www.npmjs.com/package/kemcholang"><code>npm i kemcholang </code></Link>
+            <Link href="https://www.npmjs.com/package/kemcholang" target="_blank"><code>npm i kemcholang </code></Link>
           </h2>
 
-          <h2 className="developer_name">Made by <span><Link href="https://www.linkedin.com/in/darshan-balar-4302141bb/">@darshanbalar</Link></span></h2>
+          <h2 className="developer_name">Made by <span><Link href="https://www.linkedin.com/in/darshan-balar-4302141bb/" target="_blank">@darshanbalar</Link></span></h2>
         </div>
 
         <div className="buttons">
